@@ -36,3 +36,17 @@ git pull                    # 自动从 origin/main 拉取
 - `-M` 是**危险操作**，会覆盖已存在的 `main` 分支
 - 如果团队协作，重命名前需确保其他成员知晓
 - 首次推送新分支时使用 `-u` 可以简化后续操作
+
+# How to lunch a Nacos service
+
+```
+docker run --name nacos \
+  -e MODE=standalone \
+  -p 8849:8848 \
+  nacos/nacos-server:v2.1.0
+```
+
+http://localhost:8849/nacos
+
+
+
